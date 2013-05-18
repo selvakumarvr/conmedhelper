@@ -1,0 +1,23 @@
+<div class="span8">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+<h3>  <%= @drug.medication_name %></h3>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @drug.category %>
+</p>
+
+<p>
+  <b>Information:</b>
+  <%= @drug.information %>
+</p>
+
+
+<%= link_to 'Edit', edit_drug_path(@drug) %> |
+<%= link_to 'Back', drugs_path %>
+
+</div>

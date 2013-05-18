@@ -1,0 +1,22 @@
+<div class="span10">
+<br>
+<h3> All Studies</h3>
+
+<table class="table table-hover">
+  <tr><thead>
+
+  </thead></tr>
+<br>
+
+<% @studies.each do |study| %>
+  <tr>
+    <td><%= link_to study.name, study_path(study.id), :class =>"btn btn-large btn-primar" %><br><br><br></td>
+  </tr>
+
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Study', new_study_path %>
+</div>

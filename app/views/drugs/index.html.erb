@@ -1,0 +1,42 @@
+<div class="span10">
+<br>
+<h3>All drugs</h3>
+
+<table class="table table-hover">
+  <tr><thead>
+    <th>Name</th>
+    <th>Study</th>
+    <th>Category</th>
+    <th>Information</th>
+    <th></th>
+    <th></th>
+
+  </thead></tr>
+
+<% @drugs.each do |drug| %>
+  <tr>
+    <td><%= link_to drug.medication_name, drug_path(drug.id)%></td>
+    <td><%= drug.study.name %></td>
+
+    <td>
+            	<% if drug.category =="permitted" %>
+        			<span class="label label-success">Permitted</span>
+        			<% elsif drug.category == "prohibited" %>
+        			<span class="label label-important">Prohibited</span>
+        			<% else %>
+        			<span class="label label-warning">Restricted</span>
+
+        			<% end%>
+    </td>
+    <td><%= drug.information %></td>
+ 	<td><%= link_to raw("<i class='icon-pencil'></i> Edit"), edit_drug_path(drug), :class => 'btn btn-small' %></td>
+  <td> <%= link_to raw("<i class='icon-trash'></i>"), drug, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-small btn-danger' %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Drug', new_drug_path %>
+
+</div>

@@ -1,0 +1,35 @@
+<div class = "span10">
+<h3>Search result for term <em>'<%= @query %>'</em> resulted in <%= pluralize(@total_hits, 'hit') %></h3>
+<p class="supertiny">&nbsp;</p>
+<div class="well">
+
+<% unless @drugs.empty? %>
+	<ul>
+		<% for drug in @drugs do %>
+		<hr>
+			
+			<h3><%= link_to drug.medication_name, drug_path(drug)%> &nbsp;-&nbsp;<%= drug.study.name %>
+		    </h3>
+          	<% if drug.category =="permitted" %>
+      			<span class="label label-success">Permitted</span>
+      			<% elsif drug.category == "prohibited" %>
+      			<span class="label label-important">Prohibited</span>
+      			<% else %>
+      			<span class="label label-warning">Restricted</span>
+
+      		<% end%>
+  			<br>
+  			<br>
+		    <b> Information: </b><%= drug.information %>
+			
+		<% end %>
+	</ul>
+	<hr>
+	
+	<p class="smtext">&nbsp;</p>
+<% end %>
+
+
+</div>
+		
+</div>

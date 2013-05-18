@@ -1,0 +1,38 @@
+<%= simple_form_for @study, :html => { :class => 'form-horizontal form-inline' } do |f| %>
+  <% if @study.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@study.errors.count, "error") %> prohibited this workshop from being saved:</h2>
+
+      <ul>
+      <% @study.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<br>
+<br>
+
+  <div class="field">
+	<%= f.input :name %>
+   </div>
+<br>
+
+ <div class="field">
+	<%= f.input :description %>
+   </div>
+<br>
+
+<br>
+
+  <div class="actions">
+	  <%= f.submit nil, :class => 'btn btn-small btn-success' %>
+	  <%= link_to 'Cancel', studies_path, :class => 'btn btn-small' %>
+  
+  </div>
+<% end %>
+
+
+
+

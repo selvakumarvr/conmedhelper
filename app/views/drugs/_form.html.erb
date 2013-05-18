@@ -1,0 +1,57 @@
+<%= simple_form_for @drug, :html => { :class => 'form-horizontal form-inline' } do |f| %>
+  <% if @drug.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@drug.errors.count, "error") %> prohibited this workshop from being saved:</h2>
+
+      <ul>
+      <% @drug.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<br>
+<br>
+
+  <div class="field">
+	<%= f.input :medication_name %>
+   </div>
+<br>
+
+<div class="field">
+	<%= f.input :medication_category %>
+   </div>
+<br>
+
+<div class="field">
+	<%= f.input :common_name %>
+   </div>
+
+<br>
+  <div class="field">
+	<%= f.input :category, :collection => Drug::CATEGORIES_LIST %>
+  </div>
+<br>
+
+ <div class="field">
+	<%= f.input :information, :as => :text, :input_html => { :cols => 20, :rows => 5 }%>
+   </div>
+
+ <div class="field">
+	<%= f.input :study_id %>
+   </div>
+<br>
+
+<br>
+
+  <div class="actions">
+	  <%= f.submit nil, :class => 'btn btn-small btn-success' %>
+	  <%= link_to 'Cancel', drugs_path, :class => 'btn btn-small' %>
+  
+  </div>
+<% end %>
+
+
+
+

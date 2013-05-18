@@ -1,0 +1,19 @@
+<div class="span8">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  	<h3>  <%= @study.name %></h3>
+
+</p>
+
+
+	<%= form_tag (search_path) do %>
+		<%= text_field_tag('query', '', :size => 12, :class => "input-small search-query", :placeholder =>"Search") %>
+	<% end %>
+
+<br>
+<%= link_to 'Edit', edit_study_path(@study) %> |
+<%= link_to 'Back', studies_path %>
+
+</div>
