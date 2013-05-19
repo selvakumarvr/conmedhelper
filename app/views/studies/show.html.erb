@@ -12,7 +12,38 @@
 		<%= text_field_tag('query', '', :size => 12, :class => "input-small search-query", :placeholder =>"Search") %>
 	<% end %>
 
+	<script>
+		var medications = [];
+		<% @drugs.each do |d| %>
+			medications.push("<%= d.medication_name %>");
+		<% end %>
+		$( "#query" ).autocomplete({
+			source: medications
+		});
+	</script>
 <br>
+<% if @drugs.empty? %>
+	<p>There are no drugs associated with this study.<p>
+<% else %>
+	<table id="associated-drugs">
+		<% @drugs.each do |drug| %>
+		<hr>
+		<h3><%= link_to drug.medication_name, drug_path(drug)%>
+	    </h3>
+      	<% if drug.category =="permitted" %>
+  			<span class="label label-success">Permitted</span>
+  			<% elsif drug.category == "prohibited" %>
+  			<span class="label label-important">Prohibited</span>
+  			<% else %>
+  			<span class="label label-warning">Restricted</span>
+
+  		<% end%>
+			<br>
+			<br>
+	    <b> Information: </b><%= drug.information %>
+		<% end%>
+	</table>
+<% end %>
 <%= link_to 'Edit', edit_study_path(@study) %> |
 <%= link_to 'Back', studies_path %>
 
