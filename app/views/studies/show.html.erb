@@ -8,13 +8,13 @@
 </p>
 
 
-	<%= form_tag (search_path) do %>
+	<%= form_tag study_path, :method => 'get' do %>
 		<%= text_field_tag('query', '', :size => 12, :class => "input-small search-query", :placeholder =>"Search") %>
 	<% end %>
 
 	<script>
 		var medications = [];
-		<% @drugs.each do |d| %>
+		<% @study_drugs.each do |d| %>
 			medications.push("<%= d.medication_name %>");
 		<% end %>
 		$( "#query" ).autocomplete({
@@ -22,11 +22,11 @@
 		});
 	</script>
 <br>
-<% if @drugs.empty? %>
-	<p>There are no drugs associated with this study.<p>
+<% if @search_drugs.empty? %>
+	<p>No Drugs Found<p>
 <% else %>
 	<table id="associated-drugs">
-		<% @drugs.each do |drug| %>
+		<% @search_drugs.each do |drug| %>
 		<hr>
 		<h3><%= link_to drug.medication_name, drug_path(drug)%>
 	    </h3>
