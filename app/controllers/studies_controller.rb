@@ -14,7 +14,7 @@ class StudiesController < ApplicationController
   # GET /studies/1.json
   def show
     @study = Study.find(params[:id])
-
+    @drugs = Drug.for_study(params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @study }
