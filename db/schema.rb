@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130516215453) do
+ActiveRecord::Schema.define(:version => 20130602164204) do
 
   create_table "drugs", :force => true do |t|
     t.string   "category"
@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(:version => 20130516215453) do
     t.integer  "study_id"
     t.string   "medication_name"
     t.string   "medication_category"
-    t.string   "common_name"
     t.string   "instructions"
     t.integer  "drug_id"
+    t.string   "brand_name"
   end
 
   create_table "studies", :force => true do |t|

@@ -1,20 +1,78 @@
-<div class="span10">
+<div class="span12">
 <br>
 <h3> All Studies</h3>
-
-<table class="table table-hover">
-  <tr><thead>
-
-  </thead></tr>
 <br>
 
+
 <% @studies.each do |study| %>
-  <tr>
-    <td><%= link_to study.name, study_path(study.id), :class =>"btn btn-large btn-primar" %><br><br><br></td>
-  </tr>
+<div class="row">
+	<div class="span4 well">
+    <b><%= link_to study.name, study_path(study.id)%></b>
+<br>
+<br>
+
+	<%= form_tag("/studies", :method => 'get') do %>
+	
+		<%= text_field_tag('query', '', :size => 12, :class => "query#{study.id} autoquery input-large search-query", :placeholder =>"Search and Enter") %>
+		<%= hidden_field_tag('studyid', '', :size => 12, :value => study.id) %>
+	<% end %>
+	<script>
+		var medications = [];
+		<% @study_drugs = Drug.for_study(study.id).each do |d| %>
+			medications.push("<%= d.medication_name%>");
+		<% end %>
+		$( ".query<%= study.id %>" ).autocomplete({
+			source: medications
+		});
+	</script>
+	
+		<script type="text/javascript">
+		    $(function () {
+		         $(".label").popover(
+		            {
+		                offset: 5,
+		                placement: 'bottom',
+						title: 'Information:'
+		
+		            }
+		        );
+		    });
+		</script>
+</div>
+	<div class="span6 offset1">
+	    <center>
+	
+  <% if   study.id.to_i == @studyid.to_i%>
+	
+	 <%  unless @search_drug.nil?%>
+  <h3>	<%= link_to @search_drug.medication_name, drug_path(@search_drug)%></h3>
+    <p>
+		<% if @search_drug.category =="permitted" %>
+  			<span class="label label-success" data-content="<%=  @search_drug.information%>">Permitted</span>
+  			<% elsif @search_drug.category == "prohibited" %>
+  			<span class="label label-important" data-content="<%=  @search_drug.information%>">Prohibited</span>
+  			<% else %>
+  			<span class="label label-warning" data-content="<%=  @search_drug.information%>">Restricted</span>
+
+  		<% end%>
+</p>
+<% else %>
+<p>No Drugs Found<p>
+
+	<% end %>
+	
+	<% end %>
+	</center>
+	
+</div>
+	
+</div>
+<br />
+<br><br>
+<br><br>
+<br>
 
 <% end %>
-</table>
 
 <br />
 

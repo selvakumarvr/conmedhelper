@@ -3,3 +3,4 @@ class AddMedicationNameToDrugs < ActiveRecord::Migration
     add_column :drugs, :medication_name, :string
   end
 end
+

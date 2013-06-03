@@ -3,11 +3,15 @@ class StudiesController < ApplicationController
   # GET /studies.json
   def index
     @studies = Study.all
+	@query = params[:query]
+    @search_drug = Drug.for_study(params[:studyid]).search(params[:query]).first
+
+	@studyid=params[:studyid]
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @studies }
-    end
+    end	
   end
 
   # GET /studies/1

@@ -9,7 +9,7 @@ class Drug < ActiveRecord::Base
   scope :prohibited, where('category = ?', 'prohibited')
   scope :restricted, where('category = ?', 'restricted')
   scope :permitted, where('category = ?', 'permitted')
-  scope :search, lambda { |term| where('medication_name LIKE ? OR common_name LIKE ?', "#{term}%", "#{term}%").order("medication_name", "common_name")  }
+  scope :search, lambda { |term| where('medication_name LIKE ? OR brand_name LIKE ?', "#{term}%", "#{term}%").order("medication_name", "brand_name")  }
   scope :for_study, lambda {|study_id| where("study_id = ?", study_id) }
   
   

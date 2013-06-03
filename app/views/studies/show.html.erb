@@ -9,13 +9,13 @@
 
 
 	<%= form_tag study_path, :method => 'get' do %>
-		<%= text_field_tag('query', '', :size => 12, :class => "input-small search-query", :placeholder =>"Search") %>
+		<%= text_field_tag('query', '', :size => 12, :class => "input-medium search-query", :placeholder =>"Search and Enter") %>
 	<% end %>
 
 	<script>
 		var medications = [];
 		<% @study_drugs.each do |d| %>
-			medications.push("<%= d.medication_name %>");
+			medications.push("<%= d.medication_name%>");
 		<% end %>
 		$( "#query" ).autocomplete({
 			source: medications
@@ -28,9 +28,25 @@
 	<table id="associated-drugs">
 		<% @search_drugs.each do |drug| %>
 		<hr>
-		<h3><%= link_to drug.medication_name, drug_path(drug)%>
-	    </h3>
-      	<% if drug.category =="permitted" %>
+		
+					<script type="text/javascript">
+					    $(function () {
+					         $(".btn").popover(
+					            {
+					                offset: 5,
+					                placement: 'bottom'
+					            }
+					        );
+					    });
+					</script>
+					
+					
+					
+					
+					
+					<button class="btn" id="button1" data-content='<%= drug.information %>'><%=  drug.medication_name %>
+					</button>&nbsp;
+      		<% if drug.category =="permitted" %>
   			<span class="label label-success">Permitted</span>
   			<% elsif drug.category == "prohibited" %>
   			<span class="label label-important">Prohibited</span>
@@ -38,13 +54,11 @@
   			<span class="label label-warning">Restricted</span>
 
   		<% end%>
-			<br>
-			<br>
-	    <b> Information: </b><%= drug.information %>
 		<% end%>
 	</table>
 <% end %>
-<%= link_to 'Edit', edit_study_path(@study) %> |
+<br>
+<hr>
 <%= link_to 'Back', studies_path %>
 
 </div>
