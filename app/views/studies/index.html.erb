@@ -1,6 +1,6 @@
 <div class="span12">
 <br>
-<h3> All Studies</h3>
+<h3> Bio Something</h3>
 <br>
 
 
@@ -13,16 +13,49 @@
 
 	<%= form_tag("/studies", :method => 'get') do %>
 	
-		<%= text_field_tag('query', '', :size => 12, :class => "query#{study.id} autoquery input-large search-query", :placeholder =>"Search and Enter") %>
+		<%= text_field_tag('querysearch', '', :size => 12, :class => "query#{study.id} autoquery input-large search-query", :placeholder =>"Search and Enter") %>
 		<%= hidden_field_tag('studyid', '', :size => 12, :value => study.id) %>
+		<%= hidden_field_tag('query') %>
 	<% end %>
 	<script>
-		var medications = [];
+	
+		var medications = []
 		<% @study_drugs = Drug.for_study(study.id).each do |d| %>
-			medications.push("<%= d.medication_name%>");
+		<%    if( d.brand_name.present?)  %>
+		    <% brand_medication = "#{d.brand_name.upcase} (#{d.medication_name.downcase})"%>
+	   
+	
+          
+			medications.push( {
+                    value: "<%= d.medication_name %>",
+                    label: "<%= brand_medication %>"
+                    });
+		   
+		<% elsif %>
+		
+          
+			medications.push( {
+                    label: "<%= d.medication_name %>",
+                    value: "<%= d.medication_name %>"
+                    });
+
+				<% end %>	
 		<% end %>
 		$( ".query<%= study.id %>" ).autocomplete({
-			source: medications
+						minLength: 0,
+						source: medications,
+				select: function(e, ui) {
+		
+     $("#query").val(ui.item.value);
+
+    $('#querysearch').text(ui.item.label);
+	return false;
+    },
+        focus: function(event, ui) {
+            $("#querysearch").val(ui.item.label);
+            return false;
+        }
+	
 		});
 	</script>
 	
@@ -39,13 +72,21 @@
 		    });
 		</script>
 </div>
-	<div class="span6 offset1">
+	<div class="span6 ">
 	    <center>
 	
   <% if   study.id.to_i == @studyid.to_i%>
 	
 	 <%  unless @search_drug.nil?%>
-  <h3>	<%= link_to @search_drug.medication_name, drug_path(@search_drug)%></h3>
+	 	<%    if( @search_drug.brand_name.present?)  %>
+		
+		 <h3>	<%= link_to   "#{@search_drug.brand_name.upcase} (#{@search_drug.medication_name.downcase})", drug_path(@search_drug)%></h3>
+		   
+	   <% elsif %>
+		  <h3>	<%= link_to @search_drug.medication_name, drug_path(@search_drug)%></h3>
+	<% end%>
+	 
+
     <p>
 		<% if @search_drug.category =="permitted" %>
   			<span class="label label-success" data-content="<%=  @search_drug.information%>">Permitted</span>
@@ -76,5 +117,4 @@
 
 <br />
 
-<%= link_to 'New Study', new_study_path %>
 </div>
