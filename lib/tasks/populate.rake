@@ -29,8 +29,7 @@ namespace :db do
        alzheimers_medications = Drug.new
        alzheimers_medications.medication_name = "alzheimers medications"
        alzheimers_medications.category = "restricted"
-       alzheimers_medications.information = "Allowed with following stipulations, Prior to Randomization
-        Allowed provided that the dose has been stable for 90 days prior to randomization. During double blindtreatment period, subject will remain on the same dose throughout the duration of the trail."
+       alzheimers_medications.information = "Allowed with following stipulations, Prior to Randomization Allowed provided that the dose has been stable for 90 days prior to randomization. During double blindtreatment period, subject will remain on the same dose throughout the duration of the trail."
        alzheimers_medications.study_id = study1.id
        alzheimers_medications.save!
        
@@ -38,8 +37,7 @@ namespace :db do
        cholinestrase_inhibitors = Drug.new
        cholinestrase_inhibitors.medication_name = "cholinestrase inhibitors"
        cholinestrase_inhibitors.category = "restricted"
-       cholinestrase_inhibitors.information = "Allowed with following stipulations, Prior to Randomization
-        Allowed provided that the dose has been stable for 90 days prior to randomization. During double blindtreatment period, subject will remain on the same dose throughout the duration of the trail."
+       cholinestrase_inhibitors.information = "Allowed with following stipulations, Prior to Randomization Allowed provided that the dose has been stable for 90 days prior to randomization. During double blindtreatment period, subject will remain on the same dose throughout the duration of the trail."
        cholinestrase_inhibitors.study_id = study1.id
        cholinestrase_inhibitors.save!
        
@@ -48,8 +46,7 @@ namespace :db do
        donepezil.medication_name = "donepezil"
        donepezil.brand_name = "aricept"
        donepezil.category = "restricted"
-       donepezil.information = "Allowed with following stipulations, Prior to Randomization
-         Allowed provided that the dose has been stable for 90 days prior to randomization. During double blindtreatment period, subject will remain on the same dose throughout the duration of the trail."
+       donepezil.information = "Allowed with following stipulations, Prior to Randomization Allowed provided that the dose has been stable for 90 days prior to randomization. During double blindtreatment period, subject will remain on the same dose throughout the duration of the trail."
        donepezil.study_id = study1.id
        donepezil.save!
     
@@ -58,8 +55,7 @@ namespace :db do
        rivastigmine.medication_name = "rivastigmine" 
        rivastigmine.brand_name = "exelon"
        rivastigmine.category = "restricted"
-       rivastigmine.information = "Allowed with following stipulations, Prior to Randomization
-       Allowed provided that the dose has been stable for 90 days prior to randomization. During double blindtreatment period, subject will remain on the same dose throughout the duration of the trail."
+       rivastigmine.information = "Allowed with following stipulations, Prior to Randomization Allowed provided that the dose has been stable for 90 days prior to randomization. During double blindtreatment period, subject will remain on the same dose throughout the duration of the trail."
        rivastigmine.study_id = study1.id
        rivastigmine.save!
 
@@ -69,8 +65,7 @@ namespace :db do
        galantamine.medication_name = "galantamine" 
        galantamine.brand_name = "razadyne"
        galantamine.category = "restricted"
-       galantamine.information = "Allowed with following stipulations, Prior to Randomization
-       Allowed provided that the dose has been stable for 90 days prior to randomization. During double blindtreatment period, subject will remain on the same dose throughout the duration of the trail."
+       galantamine.information = "Allowed with following stipulations, Prior to Randomization Allowed provided that the dose has been stable for 90 days prior to randomization. During double blindtreatment period, subject will remain on the same dose throughout the duration of the trail."
        galantamine.study_id = study1.id
        galantamine.save!
 
@@ -80,8 +75,7 @@ namespace :db do
        memantine.medication_name = "memantine" 
        memantine.brand_name = "namenda"
        memantine.category = "restricted"
-       memantine.information = "Allowed with following stipulations, Prior to Randomization
-       Allowed provided that the dose has been stable for 90 days prior to randomization. During double blindtreatment period, subject will remain on the same dose throughout the duration of the trail."
+       memantine.information = "Allowed with following stipulations, Prior to Randomization Allowed provided that the dose has been stable for 90 days prior to randomization. During double blindtreatment period, subject will remain on the same dose throughout the duration of the trail."
        memantine.study_id = study1.id
        memantine.save!
 
