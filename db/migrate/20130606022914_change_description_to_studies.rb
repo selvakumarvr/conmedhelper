@@ -1,10 +1,10 @@
 class ChangeDescriptionToStudies < ActiveRecord::Migration
   def up
-   description :studies, :description, :text
+   change_column :studies, :description, :text
   end
 
   def down
-   description :studies, :description, :string
+   change_column :studies, :description, :string
 end
 
 end
