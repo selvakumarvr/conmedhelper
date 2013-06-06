@@ -1,6 +1,6 @@
 class ChangeDescriptionToStudies < ActiveRecord::Migration
   def up
-   change_column :studies, :description, :text
+   change_column :studies, :description, :text, :limit => nil 
   end
 
   def down
