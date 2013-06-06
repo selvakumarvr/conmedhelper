@@ -19,7 +19,7 @@ namespace :db do
   	#Step 1: Add studies
 
     study1 = Study.new
-    study1.name = "Bio Something"
+    study1.name = "Bio Otsuka"
     study1.description = "Description for Schire"
     study1.save!
     
