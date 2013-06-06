@@ -6,5 +6,5 @@ class ChangeDescriptionToStudies < ActiveRecord::Migration
   def down
    description :studies, :description, :string
 end
-  end
+
 end
