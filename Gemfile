@@ -42,8 +42,6 @@ end
 # Simple Form
 gem 'simple_form'
 
-gem 'taps'
-
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
