@@ -40,6 +40,7 @@ group :development do
 	gem 'faker'
 	gem 'hirb'
 	gem 'wirble'
+	
 end
 # Simple Form
 gem 'simple_form'

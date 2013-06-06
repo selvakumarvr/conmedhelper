@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130602164204) do
+ActiveRecord::Schema.define(:version => 2013060602291412) do
 
   create_table "drugs", :force => true do |t|
     t.string   "category"
-    t.string   "information"
+    t.text     "information"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
     t.integer  "study_id"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20130602164204) do
 
   create_table "studies", :force => true do |t|
     t.string   "name"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "study_id"
