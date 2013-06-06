@@ -32,6 +32,7 @@ end
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+gem 'populator3'
 
 
 # Gems used only in development
@@ -39,7 +40,6 @@ group :development do
 	gem 'faker'
 	gem 'hirb'
 	gem 'wirble'
-	gem 'populator3'
 	
 end
 # Simple Form
