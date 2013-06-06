@@ -11,6 +11,7 @@ end
 
 gem 'taps'
 
+
 group :development, :test do
   gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
 end
@@ -31,10 +32,11 @@ end
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+gem 'populator3'
+
 
 # Gems used only in development
 group :development do
-	gem 'populator3'
 	gem 'faker'
 	gem 'hirb'
 	gem 'wirble'
