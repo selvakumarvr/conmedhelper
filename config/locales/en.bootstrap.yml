@@ -16,3 +16,11 @@ en:
       save: "Save"
       new: "New"
       delete: "Delete"
+    sessions:
+      email: "Email"
+      password: "Password"
+      login: "Login"
+      logout: "Logout"
+      successful_login: "Logged in successfully"
+      invalid_login: "Invalid login/password combination"
+      invalid_login: "You successfully logged out"  

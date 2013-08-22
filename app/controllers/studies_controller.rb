@@ -1,8 +1,9 @@
 class StudiesController < ApplicationController
+ before_filter :authenticate
   # GET /studies
   # GET /studies.json
   def index
-    @studies = Study.all
+    @studies  = Study.all
 	@query = params[:query]
     @search_drug = Drug.for_study(params[:studyid]).search(params[:query]).first
 

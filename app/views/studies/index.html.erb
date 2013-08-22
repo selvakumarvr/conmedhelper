@@ -1,19 +1,17 @@
 <div class="span12">
 <br>
-<h3> Bio Otsuka</h3>
 <br>
-
+<h4>Search for Drugs: </h4>
 
 <% @studies.each do |study| %>
 <div class="row">
-	<div class="span4 well">
-    <h3><%= link_to study.name, study_path(study.id)%></h3>
+	<div class="span4 ">
 <br>
-<br>
+
 
 	<%= form_tag("/studies", :method => 'get') do %>
 	
-		<%= text_field_tag('querysearch', '', :size => 12, :class => "query#{study.id} autoquery input-large search-query", :placeholder =>"Search and Enter") %>
+		<%= text_field_tag('querysearch', '', :size => 12, :class => "query#{study.id} autoquery input-large search-query", :placeholder =>"Search Drugs and Enter") %>
 		<%= hidden_field_tag('studyid', '', :size => 12, :value => study.id) %>
 		<%= hidden_field_tag('query') %>
 	<% end %>
@@ -72,7 +70,8 @@
 		    });
 		</script>
 </div>
-	<div class="span6 ">
+	<div class="span7 ">
+		<br>
 	    <center>
 	
   <% if   study.id.to_i == @studyid.to_i%>
@@ -80,10 +79,10 @@
 	 <%  unless @search_drug.nil?%>
 	 	<%    if( @search_drug.brand_name.present?)  %>
 		
-		 <h3>	<%= link_to   "#{@search_drug.brand_name.upcase} (#{@search_drug.medication_name.downcase})", drug_path(@search_drug)%></h3>
+		 <h3>	<%= link_to   "#{@search_drug.brand_name.upcase} (#{@search_drug.medication_name.downcase})", drug_path(@search_drug), :class => 'btn btn-link btn-large'%></h3>
 		   
 	   <% elsif %>
-		  <h3>	<%= link_to @search_drug.medication_name, drug_path(@search_drug)%></h3>
+		  <h3>	<%= link_to @search_drug.medication_name, drug_path(@search_drug), :class => 'btn btn-link btn-large'%></h3>
 	<% end%>
 	 
 
@@ -94,7 +93,7 @@
   			<span class="label label-important" data-content="<%=  @search_drug.information%>">Prohibited</span>
   			<% else %>
   			<span class="label label-warning" data-content="<%=  @search_drug.information%>">Restricted</span>
-
+			
   		<% end%>
 </p>
 <% else %>
