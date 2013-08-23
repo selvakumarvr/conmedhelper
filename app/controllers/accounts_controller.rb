@@ -10,8 +10,8 @@ class AccountsController < ApplicationController
 	
 	
     if @user.save
-	 session[:user_id] = @user.id
-     redirect_to tasklists_path, :notice => 'User successfully added.'
+	
+     redirect_to drugs_path, :notice => 'User successfully added.'
     else
       render :action => 'new'
     end
@@ -25,7 +25,7 @@ class AccountsController < ApplicationController
  def update
     @user = current_user
     if @user.update_attributes(params[:user])
-      redirect_to tasks_path,
+      redirect_to drugs_path,
 :notice => 'Updated user information successfully.'
     else
       render :action => 'edit'

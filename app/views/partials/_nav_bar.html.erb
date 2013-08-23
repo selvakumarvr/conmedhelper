@@ -15,8 +15,14 @@
 	       	 <ul class="dropdown-menu">
 			  <li><%= link_to raw("<i class='icon-search'></i> Search for Drugs"), studies_path%></li>	
 			  <% if current_user.login == 'apatelmd'%>
+			   <li class="divider"></li>
+				    <li><%= link_to raw("<i class='icon-user'></i> View User Activity"), drugs_path %></li> 
+			  <li><%= link_to raw("<i class='icon-list'></i> User List"), drugs_path %></li>
+			  <li><%= link_to raw("<i class='icon-plus'></i> Add Users"), new_accounts_path %></li>
 			  <li><%= link_to raw("<i class='icon-edit'></i> Edit Drugs"), drugs_path %></li>
+			  
 			   <% end %>
+	             
 	              <li class="divider"></li>
 				  <li><%= link_to raw("<i class='icon-circle-arrow-left'></i> Logout"), logout_path, method: "delete" %></li>
 	          </ul>
