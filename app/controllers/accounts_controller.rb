@@ -2,6 +2,11 @@ class AccountsController < ApplicationController
   def new
      @user = User.new
   end
+  
+  def index
+    @users = User.all
+	end
+
 
 
   def create
@@ -11,7 +16,7 @@ class AccountsController < ApplicationController
 	
     if @user.save
 	
-     redirect_to drugs_path, :notice => 'User successfully added.'
+     redirect_to users_path, :notice => 'User successfully added.'
     else
       render :action => 'new'
     end
@@ -32,6 +37,7 @@ class AccountsController < ApplicationController
     end
   end
   def show
+   @users = User.all
   end
 
 end

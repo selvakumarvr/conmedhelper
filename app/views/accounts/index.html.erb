@@ -1,0 +1,26 @@
+<div class="span8">
+<br>
+<h3>All Users</h3>
+
+<table class="table table-hover">
+  <tr><thead>
+    <th>User Name</th>
+    <th> Name</th>
+    <th>Email</th>
+  </thead></tr>
+
+ 
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.login %></td>
+	<td><%= user.name %>
+<td><%= user.email %>
+	</td>
+   
+  </tr>
+<% end %>
+</table>
+
+
+
+</div>
