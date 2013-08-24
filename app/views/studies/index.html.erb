@@ -19,8 +19,19 @@
 	
 		var medications = []
 		<% @study_drugs = Drug.for_study(study.id).each do |d| %>
-		<%    if( d.brand_name.present?)  %>
+		
+		<%    if( d.brand_name.present? && d.medication_name.present?)  %>
 		    <% brand_medication = "#{d.brand_name.upcase} (#{d.medication_name.downcase})"%>
+	   
+	
+          			medications.push( {
+                    value: "<%= d.medication_name %>",
+                    label: "<%= brand_medication %>"
+                    });
+		   
+		<% elsif( d.brand_name.present?) %>
+
+		    <% brand_medication = "#{d.brand_name.upcase} "%>
 	   
 	
           
@@ -77,11 +88,15 @@
   <% if   study.id.to_i == @studyid.to_i%>
 	
 	 <%  unless @search_drug.nil?%>
-	 	<%    if( @search_drug.brand_name.present?)  %>
+	 	<%    if( @search_drug.brand_name.present? && @search_drug.medication_name.present? )  %>
 		
 		 <h3>	<%= link_to   "#{@search_drug.brand_name.upcase} (#{@search_drug.medication_name.downcase})", drug_path(@search_drug), :class => 'btn btn-link btn-large'%></h3>
 		   
-	   <% elsif %>
+	   <% elsif( @search_drug.brand_name.present?)  %>
+	    <h3>	<%= link_to   "#{@search_drug.brand_name.upcase}", drug_path(@search_drug), :class => 'btn btn-link btn-large'%></h3>
+		
+	   
+	    <% elsif %>
 		  <h3>	<%= link_to @search_drug.medication_name, drug_path(@search_drug), :class => 'btn btn-link btn-large'%></h3>
 	<% end%>
 	 

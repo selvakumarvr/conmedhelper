@@ -1,5 +1,5 @@
 class Drug < ActiveRecord::Base
-  attr_accessible :category, :information, :instructions, :study_id, :medication_name, :medication_category, :common_name
+  attr_accessible :category, :information, :instructions, :study_id, :medication_name, :medication_category, :common_name,:brand_name
   
   # Relationships
   belongs_to :study

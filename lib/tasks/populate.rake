@@ -2758,36 +2758,36 @@ namespace :db do
     minoxidil.study_id = study1.id
     minoxidil.save! 
     
-    # st_john_wort = Drug.new
-    # st_john_wort.medication_name = "-"
-    # st_john_wort.brand_name = "St.John Wort"
-    # st_john_wort.category= "prohibited"
-    # st_john_wort.information = "Nutritional Supplements and Nonprescription Herbal Preparations (with CNS effects). Prior to randomization - 7 day washout During double-blind treatment period - Prohibited"
-    # st_john_wort.study_id = study1.id
-    # st_john_wort.save!
-    # 
-    # omega_3_fatty_acids = Drug.new
-    # omega_3_fatty_acids.medication_name = "-"
-    # omega_3_fatty_acids.brand_name = "Omega-3 fatty acids"
-    # omega_3_fatty_acids.category = "prohibited"
-    # omega_3_fatty_acids.information = "Nutritional Supplements and Nonprescription Herbal Preparations (with CNS effects). Prior to randomization - 7 day washout During double-blind treatment period - Prohibited"
-    # omega_3_fatty_acids.study_id = study1.id
-    # omega_3_fatty_acids.save!
-    # 
-    # kava_extracts = Drug.new
-    # kava_extracts.brand_name = "Kava extracts"
-    # kava_extracts.category = "prohibited"
-    # kava_extracts.information =  "Nutritional Supplements and Nonprescription Herbal Preparations (with CNS effects). Prior to randomization - 7 day washout During double-blind treatment period - Prohibited"  
-    # kava_extracts.study_id = study1.id
-    # kava_extracts.save!
-    # 
-    # gaba_supplements = Drug.new
-    # gaba_supplements.brand_name = "GABA supplements (gamma-aminobutyric acid)"
-    # gaba_supplements.category = "prohibited"
-    # gaba_supplements.information =  "Nutritional Supplements and Nonprescription Herbal Preparations (with CNS effects). Prior to randomization - 7 day washout During double-blind treatment period - Prohibited"
-    # gaba_supplements.study_id = study1.id 
-    # gaba_supplements.save!  
-    #    
+    st_john_wort = Drug.new
+    st_john_wort.medication_name = "-"
+    st_john_wort.brand_name = "St.John Wort"
+    st_john_wort.category= "prohibited"
+    st_john_wort.information = "Nutritional Supplements and Nonprescription Herbal Preparations (with CNS effects). Prior to randomization - 7 day washout During double-blind treatment period - Prohibited"
+    st_john_wort.study_id = study1.id
+    st_john_wort.save!
+     
+    omega_3_fatty_acids = Drug.new
+    omega_3_fatty_acids.medication_name = "-"
+    omega_3_fatty_acids.brand_name = "Omega-3 fatty acids"
+    omega_3_fatty_acids.category = "prohibited"
+    omega_3_fatty_acids.information = "Nutritional Supplements and Nonprescription Herbal Preparations (with CNS effects). Prior to randomization - 7 day washout During double-blind treatment period - Prohibited"
+    omega_3_fatty_acids.study_id = study1.id
+    omega_3_fatty_acids.save!
+  
+     kava_extracts = Drug.new
+     kava_extracts.brand_name = "Kava extracts"
+     kava_extracts.category = "prohibited"
+     kava_extracts.information =  "Nutritional Supplements and Nonprescription Herbal Preparations (with CNS effects). Prior to randomization - 7 day washout During double-blind treatment period - Prohibited"  
+     kava_extracts.study_id = study1.id
+     kava_extracts.save!
+#     
+     gaba_supplements = Drug.new
+     gaba_supplements.brand_name = "GABA supplements (gamma-aminobutyric acid)"
+     gaba_supplements.category = "prohibited"
+     gaba_supplements.information =  "Nutritional Supplements and Nonprescription Herbal Preparations (with CNS effects). Prior to randomization - 7 day washout During double-blind treatment period - Prohibited"
+     gaba_supplements.study_id = study1.id 
+     gaba_supplements.save!  
+#        
        
    end
 end

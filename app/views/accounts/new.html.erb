@@ -4,7 +4,7 @@
 
 <section id="register">
 	<div class="page-header">
-		<h1>Registration...</h1>
+		<h3>Add New User</h3>
 	</div>
 
    
@@ -27,8 +27,15 @@
   <% end %>
 
        
+                      <div class="control-group ">
+		<label class="control-label required" for="name">Name</label>
+		<div class="controls">
+                   <%= f.text_field :name,  :class => 'span3', :value => ""  %>
+		</div>
+	</div>
+	
                     <div class="control-group ">
-		<label class="control-label required" for="username">Login</label>
+		<label class="control-label required" for="username">Username</label>
 		<div class="controls">
 		<%= f.text_field :login , :class => 'span3' , :value => "" %>
 			
@@ -50,12 +57,7 @@
           
                 
                 
-                <div class="control-group ">
-		<label class="control-label required" for="name">Name</label>
-		<div class="controls">
-                   <%= f.text_field :name,  :class => 'span3', :value => ""  %>
-		</div>
-	</div>
+ 
                 
                 
                

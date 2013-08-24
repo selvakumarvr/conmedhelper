@@ -4,18 +4,23 @@
 
 <table class="table table-hover">
   <tr><thead>
-    <th>User Name</th>
-    <th> Name</th>
+    <th>Name</th>
+    <th>Username</th>
     <th>Email</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </thead></tr>
 
  
 <% @users.each do |user| %>
   <tr>
+  		<td><%= user.name %>
     <td><%= user.login %></td>
-	<td><%= user.name %>
+
 <td><%= user.email %>
 	</td>
+	<td><%= link_to raw("<i class='icon-pencil'></i> Edit"), edit_user_path(user), :class => 'btn btn-small' %></td>
+<td> <%= link_to raw("<i class='icon-trash'></i> Delete"), user, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-small btn-danger' %></td>
    
   </tr>
 <% end %>
