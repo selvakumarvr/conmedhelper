@@ -13,7 +13,7 @@ gem 'taps'
 
 
 group :development, :test do
-gem 'sqlite3', '1.3.5'
+  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
 end
 
 # Gems used only for assets and not required
@@ -29,18 +29,18 @@ group :assets do
 end
 
 # Twitter Boostrap gems
-#gem "therubyracer"
-#gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 gem 'populator3'
 
 
 # Gems used only in development
 group :development do
-	gem 'faker'
-	gem 'hirb'
-	gem 'wirble'
-	
+  gem 'faker'
+  gem 'hirb'
+  gem 'wirble'
+  
 end
 # Simple Form
 gem 'simple_form'
