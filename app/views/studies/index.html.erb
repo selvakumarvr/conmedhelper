@@ -1,7 +1,7 @@
 <div class="span12">
 <br>
 <br>
-<h4>Search for Drugs: </h4>
+<h4>Search Conmed: </h4>
 
 <% @studies.each do |study| %>
 <div class="row">
@@ -31,12 +31,12 @@
 		   
 		<% elsif( d.brand_name.present?) %>
 
-		    <% brand_medication = "#{d.brand_name.upcase} "%>
+		    <% brand_medication = "#{d.brand_name.upcase}"%>
 	   
 	
           
 			medications.push( {
-                    value: "<%= d.medication_name %>",
+                    value: "<%= brand_medication %>",
                     label: "<%= brand_medication %>"
                     });
 		   

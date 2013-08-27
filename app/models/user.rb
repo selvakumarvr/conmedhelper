@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-attr_accessible :login, :email, :password, :name
+attr_accessible :login,  :password, :name
   
   #
 		 validates :login, :confirmation => true,
@@ -9,9 +9,7 @@ attr_accessible :login, :email, :password, :name
                      
                        :presence => true
 					   
-validates :email, :uniqueness => true, 
-                    :length => { :within => 5..50 }, 
-                    :format => { :with => /^[^@][\w.-]+@[\w.-]+[.][a-z]{2,4}$/i }
+
   validates :password, :confirmation => true,
                        :length => { :within => 4..20 },
                        :presence => true

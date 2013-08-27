@@ -2,7 +2,7 @@
   <div class="navbar-inner">
     <%= link_to "Home", home_path, :class => "brand" %>
     <ul class="nav">
-	  <li><%= link_to "Search for Drugs", studies_path %></li>
+	  <li><%= link_to "Search Conmed", studies_path %></li>
 	  <li><%= link_to "Feedback", feedback_path %></li>
 	
     </ul>
@@ -13,10 +13,10 @@
               <button class="btn btn-small"> <i class='icon-user'> </i>Hello, <%= current_user.name %> </button>
 	        <button class="btn dropdown-toggle btn-small" data-toggle="dropdown"><span class="caret"></span></button>
 	       	 <ul class="dropdown-menu">
-			  <li><%= link_to raw("<i class='icon-search'></i> Search for Drugs"), studies_path%></li>	
+			  <li><%= link_to raw("<i class='icon-search'></i> Search Conmed"), studies_path%></li>	
 			  <% if current_user.login == 'apatelmd'%>
 			   <li class="divider"></li>
-				    <li><%= link_to raw("<i class='icon-user'></i> View User Activity"), drugs_path %></li> 
+			
 			  <li><%= link_to raw("<i class='icon-list'></i> User List"), users_path %></li>
 			  <li><%= link_to raw("<i class='icon-plus'></i> Add Users"), new_accounts_path %></li>
 			  <li><%= link_to raw("<i class='icon-edit'></i> Edit Drugs"), drugs_path %></li>

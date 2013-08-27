@@ -2759,7 +2759,7 @@ namespace :db do
     minoxidil.save! 
     
     st_john_wort = Drug.new
-    st_john_wort.medication_name = "-"
+ 
     st_john_wort.brand_name = "St.John Wort"
     st_john_wort.category= "prohibited"
     st_john_wort.information = "Nutritional Supplements and Nonprescription Herbal Preparations (with CNS effects). Prior to randomization - 7 day washout During double-blind treatment period - Prohibited"
@@ -2767,7 +2767,7 @@ namespace :db do
     st_john_wort.save!
      
     omega_3_fatty_acids = Drug.new
-    omega_3_fatty_acids.medication_name = "-"
+  
     omega_3_fatty_acids.brand_name = "Omega-3 fatty acids"
     omega_3_fatty_acids.category = "prohibited"
     omega_3_fatty_acids.information = "Nutritional Supplements and Nonprescription Herbal Preparations (with CNS effects). Prior to randomization - 7 day washout During double-blind treatment period - Prohibited"
