@@ -7,6 +7,7 @@ gem 'rails', '3.2.12'
 
 group :production, :staging do
   gem "pg"
+    gem 'faker'
 end
 
 gem 'taps'
