@@ -23,14 +23,8 @@
 		<% end%>
 	</td>
     <td>
-            	<% if drug.category =="permitted" %>
-        			<span class="label label-success">Permitted</span>
-        			<% elsif drug.category == "prohibited" %>
-        			<span class="label label-important">Prohibited</span>
-        			<% else %>
-        			<span class="label label-warning">Restricted</span>
-
-        			<% end%>
+      <%= drug.category %>
+     
     </td>
     <td><%= drug.information %></td>
  	<td><%= link_to raw("<i class='icon-pencil'></i> Edit"), edit_drug_path(drug), :class => 'btn btn-small' %></td>
