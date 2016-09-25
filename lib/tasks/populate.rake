@@ -26,14 +26,14 @@ namespace :db do
     
     alzheimers_medications = Drug.new
     alzheimers_medications.medication_name = "Actos"
-    alzheimers_medications.category = "Following Medications are prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.category = "restricted"
     alzheimers_medications.study_id = study1.id
     alzheimers_medications.save!
 
     alzheimers_medications = Drug.new
     alzheimers_medications.medication_name = "Alurate"
-    alzheimers_medications.category = "Following Medications are prohibited 30 days prior to screening and throughout the study period"
-     alzheimers_medications.study_id = study1.id
+    alzheimers_medications.category = "restricted"
+    alzheimers_medications.study_id = study1.id
     alzheimers_medications.save!
 
        
