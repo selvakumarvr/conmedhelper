@@ -102,14 +102,7 @@
 	 
 
     <p>
-		<% if @search_drug.category =="permitted" %>
-  			<span class="label label-success" data-content="<%=  @search_drug.information%>">Permitted</span>
-  			<% elsif @search_drug.category == "prohibited" %>
-  			<span class="label label-important" data-content="<%=  @search_drug.information%>">Prohibited</span>
-  			<% else %>
-  			<span class="label label-warning" data-content="<%=  @search_drug.information%>">Restricted</span>
-			
-  		<% end%>
+      <%= @search_drug.category %>
 </p>
 <% else %>
 <p>No Drugs Found<p>
