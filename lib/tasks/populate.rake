@@ -45,7 +45,7 @@ namespace :db do
 
     nmda_receptor_antagonist_medications = Drug.new
     nmda_receptor_antagonist_medications.medication_name = "NMDA Receptor Antagonist Medications"
-    nmda_receptor_antagonist_medications.category = "restricted"
+    nmda_receptor_antagonist_medications.category = "restricted two"
     nmda_receptor_antagonist_medications.information = "Allowed provided that the dose has been stable for 90 days prior to randomization.During double-blind treatment period Subject will remain on the same dose throughout the duration of the trial."
     nmda_receptor_antagonist_medications.study_id = study1.id
     nmda_receptor_antagonist_medications.save!
