@@ -23,18 +23,33 @@ namespace :db do
     study1.save!
     
     #Step 2: Add medications
-    
-    alzheimers_medications1 = Drug.new
-    alzheimers_medications1.medication_name = "Actos"
-    alzheimers_medications1.category = "Following Medications are allowed during the study; however they are prohibited within 24 hours prior to taking IP"
-    alzheimers_medications1.study_id = study1.id
-    alzheimers_medications1.save!
 
     alzheimers_medications = Drug.new
     alzheimers_medications.medication_name = "Alurate"
-    alzheimers_medications.category = "Following Medications are allowed during the study; however they are prohibited within 24 hours prior to taking IP"
-     alzheimers_medications.study_id = study1.id
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
     alzheimers_medications.save!
 
-   end
+
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Alurate"
+    alzheimers_medications.category = " Allowed during the study; However, they are prohibited within 48 hours prior to taking IP"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+
+
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Alurate"
+    alzheimers_medications.category = "Allowed during the study; however they are prohibited within 24 hours prior to taking IP"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+
+
+
+
+  end
 end
