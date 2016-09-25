@@ -33,7 +33,7 @@ namespace :db do
 
 
     alzheimers_medications = Drug.new
-    alzheimers_medications.medication_name = "Alurate"
+    alzheimers_medications.medication_name = "Alurate1"
     alzheimers_medications.category = " Allowed during the study; However, they are prohibited within 48 hours prior to taking IP"
     alzheimers_medications.study_id = study1.id
     alzheimers_medications.save!
@@ -42,7 +42,7 @@ namespace :db do
 
 
     alzheimers_medications = Drug.new
-    alzheimers_medications.medication_name = "Alurate"
+    alzheimers_medications.medication_name = "Alurate2"
     alzheimers_medications.category = "Allowed during the study; however they are prohibited within 24 hours prior to taking IP"
     alzheimers_medications.study_id = study1.id
     alzheimers_medications.save!
