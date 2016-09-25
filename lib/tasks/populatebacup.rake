@@ -1,0 +1,241 @@
+namespace :db do
+  desc "Erase and fill database"
+  # creating a rake task within db namespace called 'populate'
+  # executing 'rake db:populate' will cause this script to run
+  task :populate => :environment do
+    # Invoke rake db:migrate just in case...
+    Rake::Task['db:migrate'].invoke
+    # Need two gems to make this work: faker & populator
+    # Docs at: http://populator.rubyforge.org/
+    require 'populator'
+    # Docs at: http://faker.rubyforge.org/rdoc/
+    require 'faker'
+
+    # Step 0: clear any old data in the db
+    [Study, Drug].each(&:delete_all)
+
+	
+  	#Step 1: Add studies
+
+    study1 = Study.new
+    study1.name = "Migraine"
+    study1.description = "Migraine Study"
+    study1.save!
+    
+    #Step 2: Add medications
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Actos"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Alurate"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Amobarbital"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Amytal"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Aprepitant"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Aprobarbital"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Atretol"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Baycadron"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Benzamycin"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Betamethasone"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Biaxin"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Busodium,Butisol"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Butabarbital"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Butalbital"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "calan, calan SR"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Carbamazepine"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Carbatrol"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Cardizem"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Celestone"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Clarithromycin"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Cortef"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Crixivan"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Cyclosporine-oral/IV only"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Deltasone"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Dexamethasone"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "DexPak"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Diflucan"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Dilantin"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Diltiazem"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Efavirenz"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Emend"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Epitol"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Equetro"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Ery Tab"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Erythromycin"
+    alzheimers_medications.category = "Prohibited 30 days prior to screening and throughout the study period"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+
+
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Alurate1"
+    alzheimers_medications.category = " Allowed during the study; However, they are prohibited within 48 hours prior to taking IP"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+
+
+
+    alzheimers_medications = Drug.new
+    alzheimers_medications.medication_name = "Alurate2"
+    alzheimers_medications.category = "Allowed during the study; however they are prohibited within 24 hours prior to taking IP"
+    alzheimers_medications.study_id = study1.id
+    alzheimers_medications.save!
+
+
+
+
+
+  end
+end
