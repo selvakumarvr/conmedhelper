@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb41342-d543-4319-8332-3c71facb3a33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130606033656_change_category_to_drugs.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/populate.rake" afterPath="$PROJECT_DIR$/lib/tasks/populate.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130606033656_change_category_to_drugs.rb" afterPath="$PROJECT_DIR$/db/migrate/20130606033656_change_category_to_drugs.rb" />
     </list>
     <ignored path="conmedhelper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,20 +57,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20130606033656_change_category_to_drugs.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="20130606033656_change_category_to_drugs.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20130606033656_change_category_to_drugs.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+            <state vertical-scroll-proportion="0.28601694" vertical-offset="0" max-vertical-offset="472">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="populate.rake" pinned="false" current-in-tab="true">
+      <file leaf-file-name="populate.rake" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/tasks/populate.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.88559324" vertical-offset="182" max-vertical-offset="690">
+            <state vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="690">
               <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
               <folding />
             </state>
@@ -136,8 +135,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20130606033656_change_category_to_drugs.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/populate.rake" />
+        <option value="$PROJECT_DIR$/db/migrate/20130606033656_change_category_to_drugs.rb" />
       </list>
     </option>
   </component>
@@ -890,14 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130515014316_create_drugs.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/2013060602291412_change_description_to_studies.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="472">
@@ -906,18 +897,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130606033656_change_category_to_drugs.rb">
+    <entry file="file://$PROJECT_DIR$/lib/tasks/populate.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="690">
+          <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/populate.rake">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130515014316_create_drugs.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.88559324" vertical-offset="182" max-vertical-offset="690">
-          <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130606033656_change_category_to_drugs.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28601694" vertical-offset="0" max-vertical-offset="472">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
